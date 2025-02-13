@@ -1,117 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عيد حب سعيد يا توتو ❤️</title>
-    <style>
-        body {
-            background: url('https://i.imgur.com/3n6PUpF.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Arial', sans-serif;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        .message-box {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 15px;
-            display: inline-block;
-            max-width: 80%;
-            margin-top: 10%;
-        }
-        h1 {
-            font-size: 28px;
-            color: #ff4d6d;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .hearts {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        .heart {
-            position: absolute;
-            bottom: -50px;
-            width: 20px;
-            height: 20px;
-            background: red;
-            opacity: 0.7;
-            transform: rotate(-45deg);
-            animation: floatUp 5s infinite ease-in;
-        }
-        .heart::before, .heart::after {
-            content: "";
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: red;
-            border-radius: 50%;
-        }
-        .heart::before {
-            top: -10px;
-            left: 0;
-        }
-        .heart::after {
-            left: 10px;
-            top: 0;
-        }
-        @keyframes floatUp {
-            0% { transform: translateY(0) rotate(-45deg); opacity: 1; }
-            50% { opacity: 0.8; }
-            100% { transform: translateY(-100vh) rotate(-45deg); opacity: 0; }
-        }
-    </style>
-</head>
-<body>
-    <div class="hearts"></div>
-    <div class="message-box">
-        <h1>توتو يا روح الروح يا دنيتي يا أغلى حدا بقلبي ❤️</h1>
-        <p>
-            يمكن المسافة بعيدة بس والله انتي أقرب حدا لقلبي أقرب من نبضي أقرب من روحي
-            كل ثانية بتمر انتي بقلبي بدمي بتفكيري بكل زاوية بحياتي صرتي كلشي بحبو بهالدنيا
-            كل فرحة بعيشها بسببك وكل يوم بمر بحبك أكتر من اليوم الي قبلو<br><br>
-
-            بحبك حب م حدا حبو من قبل حب مابيعرف لا وقت ولا حدود حب ما رح ينتهي ولا رح يخلص
-            انتي عيوني الي بشوف فيها الدنيا ضحكتك هي الراحة الي بتمناها صوتك هو السكون يلي بهدي قلبي
-            انتي الأمان الي عمري ما حسيتو قبل انتي البداية الحلوة بكل يوم بعيشو وانتي آخر فكرة براسي قبل ما أنام<br><br>
-
-            والله العظيم يا سنفورتي الحلوة انتي أغلى هدية ربنا أعطاني إياها وأحلى نصيب صار لي بحياتي
-            ما كنت مفكر الحب يكون بهاي الطريقة لحد ما عرفتك ومن يومها وأنا حاسس اني محظوظ
-            حاسس اني عايش أحلى أيام عمري كل لحظة معك بتسوى الدنيا كلها وكل كلمة منك بتفرق جواي كثير<br><br>
-
-            أنا معك إلك جنبك سندك أمانك وضهرك بكل وقت
-            بخاف عليك أكتر ما بخاف على حالي وما في بالدنيا شيء أغلى منك عندي بوعدك شو ما صار وين ما كنا
-            لو شو ما مر علينا ما في شيء رح يفرقنا رح نظل لبعض ورح نعيش الحب يلي حلمنا فيه مع بعض ي عمري🫀❤️💋<br><br>
-
-            بحبك يا أحلى بنوتة يا نصي الثاني يا بنت قلبي والله العظيم بحبك حب ما اله آخر ❤️🫂<br><br>
-
-            ويا رب يحفظك ويخليك إلي ويحققلك كل أحلامك ويكون معك بكل خطوة والله يديمك بحياتي وما يحرمني منك 🤲🏻❤️
-        </p>
-    </div>
-
-    <audio autoplay loop>
-        <source src="Embers.mp3" type="audio/mp3">
-    </audio>
-
-    <script>
-        function createHeart() {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-            document.querySelector(".hearts").appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
-        }
-        setInterval(createHeart, 300);
-    </script>
-</body>
-</html>
